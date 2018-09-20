@@ -5,6 +5,7 @@ import {Navigator} from 'react-native-navigation'
 import {Button, InputItem, List, WhiteSpace} from 'antd-mobile-rn'
 import startTabBasedApp from '../../app'
 import {AuthStore} from '../../Stores/AuthStore'
+import * as wechat from '../../Helper/Natives/Wechat'
 
 interface Props {
   auth: AuthStore,
@@ -31,6 +32,7 @@ class LoginScreen extends Component<Props, State> {
 
   componentDidMount() {
     this.setState({username: this.props.auth.username})
+    // wechat.registerApp('your appid')
   }
 
   private _toRegister(): void {
@@ -41,6 +43,17 @@ class LoginScreen extends Component<Props, State> {
     if (res) {
       startTabBasedApp()
     }
+  }
+
+  _wexin = () => {
+    wechat.isWXAppInstalled()
+      .then((isInstalled) => {
+        if (isInstalled) {
+          alert(' 安装了')
+        } else {
+          alert('没有安装微信软件，请您安装微信之后再试')
+        }
+      })
   }
 
   render() {
@@ -66,6 +79,8 @@ class LoginScreen extends Component<Props, State> {
         <Button type='primary' onClick={this._onLogin}>登录</Button>
         <WhiteSpace/>
         <Button type='primary' onClick={this._toRegister}>注册</Button>
+        <WhiteSpace/>
+        <Button type='primary' onClick={this._wexin}>微信</Button>
       </View>
     )
   }

@@ -1,6 +1,8 @@
 package com.chalkapp;
 
 import android.graphics.Color;
+import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.View;
