@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "es2015",
+    "jsx": "react",
+    "noEmit": true,
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "allowJs": true,
+    "eofline": false
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "extends": [
+    "tslint-react-recommended"
+  ],
+  "rules": {
+    "ordered-imports": [
+      false
+    ],
+    "quotemark": [
+      true,
+      "single",
+      "jsx-single",
+      "avoid-escape"
+    ],
+    "semicolon": [
+      true,
+      "never"
+    ],
+    "comma-dangle": [
+      2,
+      "never"
+    ],
+    "member-access": [
+      false
+    ],
+    "member-ordering": [
+      false
+    ],
+    "trailing-comma": [
+      false,
+      {
+        "singleline": "never",
+        "multiline": "always"
+      }
+    ],
+    "no-empty": false,
+    "prefer-object-spread": false,
+    "no-submodule-imports": false,
+    "no-implicit-dependencies": false,
+    "no-constant-condition": false,
+    "no-dupe-keys": 2,
+    "triple-equals": [
+      true,
+      "allow-undefined-check"
+    ],
+    "ter-indent": [
+      true,
+      2,
+      {
+        "SwitchCase": 1
+      }
+    ],
+    "no-duplicate-imports": false,
+    "jsx-alignment": false,
+    "align": [
+      true,
+      "parameters",
+      "arguments",
+      "statements",
+      "members",
+      "elements"
+    ],
+    // 定义对齐风格
+    "jsx-no-bind": true,
+    "jsx-no-lambda": false,
+    "object-literal-key-quotes": false,
+    "max-classes-per-file": [
+      false
+    ]
+  }
+}

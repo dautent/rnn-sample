@@ -1,0 +1,99 @@
+//在eslint的规则中：0代表off、1代表warning、2代表报错
+{
+  "extends": "airbnb",
+  "plugins": [
+    "react",
+    "react-native"
+  ],
+  "globals": {
+    "__DEV__": true,
+    "fetch": true
+  },
+  "parser": "babel-eslint",
+  "rules": {
+    "max-len": [
+      "error",
+      120
+    ],
+    "no-console": 0,
+    //不使用console
+    "react/forbid-prop-types": [
+      0,
+      {
+        "forbid": [
+          "any",
+          "array",
+          "object"
+        ]
+      }
+    ],
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [
+          ".js",
+          ".jsx"
+        ]
+      }
+    ],
+    "no-var": 0,
+    //不使用var
+    "react/prefer-stateless-function": "off",
+    "semi": [
+      "error",
+      "never"
+    ],
+    //不使用分号
+    "no-dupe-keys": 2,
+    "no-redeclare": 2,
+    //禁止重复声明变量
+    "no-use-before-define": 0,
+    //未定义前不能使用
+    "default-case": 2,
+    //switch语句最后必须有default
+    "no-plusplus": 0,
+    "spaced-comment": 0,
+    "one-var-declaration-per-line": 0,
+    "one-var": 0,
+    "eol-last": 0,
+    "no-underscore-dangle": 0,
+    "jsx-quotes": 0,
+    "react/jsx-curly-spacing": 0,
+    "react/jsx-tag-spacing": 0,
+    "react/jsx-max-props-per-line": 0,
+    "no-trailing-spaces": 0,
+    "class-methods-use-this": 0,
+    "arrow-parens": 0,
+    "consistent-return": 0,
+    "react/prop-types": 0,
+    "quote-props": 0,
+    "prefer-template": 0,
+    "react/no-did-mount-set-state": 0,
+    "no-unused-expressions": 0,
+    "react/require-default-props": 0,
+    "padded-blocks": 0,
+    "no-multi-spaces": 0,
+    "object-property-newline": 0,
+    "object-curly-newline": 0,
+    "no-return-assign": 0,
+    "no-param-reassign": 0,
+    "prefer-destructuring": 0,
+    "global-require": 0,
+    "indent": [
+      2,
+      2,
+      {
+        "SwitchCase": 1
+      }
+    ],
+    "react/jsx-closing-bracket-location": 0,
+    "react/jsx-first-prop-new-line": 0,
+    "react/jsx-indent-props": 0,
+    "comma-dangle": [
+      2,
+      "never"
+    ],
+    //对象字面量项尾不能有逗号
+    "linebreak-style": "off"
+  }
+}
