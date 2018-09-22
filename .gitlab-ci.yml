@@ -1,0 +1,27 @@
+image: magiczvn/gitlab-ci-react-native-android
+
+cache:
+  paths:
+  - node_modules/
+  - .gradle/
+
+stages:
+- build
+
+before_script:
+- mkdir -p $ANDROID_HOME/licenses
+- echo "d56f5187479451eabf01fb78af6dfcb131a6481e" >> $ANDROID_HOME/licenses/android-sdk-license
+- echo "8933bad161af4178b1185d1a37fbf41ea5269c55" > $ANDROID_HOME/licenses/android-sdk-license
+- export GRADLE_USER_HOME=$(pwd)/.gradle
+- chmod +x ./android/gradlew
+
+build:
+  stage: build
+
+  script:
+  - yarn
+  - cd android && ./gradlew assembleRelease && cd ..
+  - mv ./android/app/build/outputs/apk/release/app-release.apk .
+  artifacts:
+    paths:
+    - app-release.apk
